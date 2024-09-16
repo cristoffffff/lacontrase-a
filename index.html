@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Página protegida</title>
+  <style>
+    #contenido {
+      display: none;
+    }
+    #acceso {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <h1 id="titulo">Página protegida</h1>
+  <div id="acceso">
+    <input type="password" id="contraseña" placeholder="Ingrese su contraseña">
+    <button onclick="verificarContraseña()">Ingresar</button>
+  </div>
+  
+  <div id="contenido">
+    <h2>Bro asi esta bien?</h2>
+    <p>LA ALEXANDRAAAAAAA</p>
+  </div>
+
+  <script>
+    function verificarContraseña() {
+      var contraseña = document.getElementById("contraseña").value;
+      if (contraseña === "camila") {
+        // Ocultar el formulario de acceso y el título
+        document.getElementById("acceso").style.display = "none";
+        document.getElementById("titulo").style.display = "none";
+        // Mostrar el contenido protegido
+        document.getElementById("contenido").style.display = "block";
+      } else {
+        alert("Contraseña incorrecta");
+      }
+    }
+  </script>
+</body>
+</html>
+
